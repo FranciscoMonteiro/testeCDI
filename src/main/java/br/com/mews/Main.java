@@ -15,6 +15,7 @@ public class Main {
 	@Inject
 	private ATM atm;
 
+        
 	public void deposit(@Observes ContainerInitialized con) {
 		this.atm.deposit(10);
 	}

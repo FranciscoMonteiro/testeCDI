@@ -12,7 +12,9 @@ import org.slf4j.LoggerFactory;
 public class LogProduces {
 
 	@Produces
-	Logger createLogger( InjectionPoint injectionPoint ) {
-		return LoggerFactory.getLogger(injectionPoint.getMember().getDeclaringClass().getName());
-	}
+	Logger createLogger(InjectionPoint injectionPoint ) {
+            System.out.println("----------------------------------------"+injectionPoint.getMember().getDeclaringClass().getName());
+		//return LoggerFactory.getLogger(injectionPoint.getMember().getDeclaringClass().getName());
+            return LoggerFactory.getLogger("teste");
+        }
 }
